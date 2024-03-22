@@ -18,7 +18,10 @@ const Login = () => {
   };
   useEffect(() => {
     if (id && pw) {
-      setIsDisable(false);
+      return setIsDisable(false);
+    }
+    if (id || pw) {
+      return setIsDisable(true);
     }
   }, [id, pw]);
   useEffect(() => {
